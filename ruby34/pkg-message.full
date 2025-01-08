@@ -1,0 +1,13 @@
+[
+{ type: install
+  message: <<EOM
+Some of the standard commands and libraries are provided as separate
+ports for ease of upgrading:
+
+	devel/ruby-gems:		gem - RubyGems package manager
+	sysutils/rubygem-bundler:	bundler - Tool that manages gem dependencies for ruby applications
+
+Install them as occasion demands.
+EOM
+}
+]

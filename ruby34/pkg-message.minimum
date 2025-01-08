@@ -1,0 +1,111 @@
+[
+{ type: install
+  message: <<EOM
+Some of the standard commands and libraries are provided as separate
+ports for ease of upgrading:
+
+	devel/ruby-gems			gem - RubyGems package manager
+	sysutils/rubygem-bundler	bundler - Tool that manages gem dependencies for ruby applications
+
+    default gems from lib:
+	benchmarks/rubygem-benchmark	benchmark - Performance benchmarking library
+	devel/rubygem-delegate          delegate - Provide three abilities to delegate method calls to an object
+	devel/rubygem-did_you_mean      did_you_mean - Save people from typos
+	devel/rubygem-english           english - Reference global variables with less cryptic names
+	devel/rubygem-erb               erb - Easy to use but powerful templating system for Ruby
+	devel/rubygem-error_highlight   error_highlight - Enhance Exception\#message
+	devel/rubygem-fileutils         fileutils - Several file utility methods for copying, moving, removing, etc
+	devel/rubygem-find              find - Support top-down traversal of a set of file paths
+	devel/rubygem-forwardable       forwardable - Provides delegation of specified methods to a designated object
+	devel/rubygem-irb               irb - Interactive Ruby
+	devel/rubygem-logger            logger - Simple logging utility for outputting messages
+	devel/rubygem-open3             open3 - Popen, but with stderr, too
+	devel/rubygem-optparse          optparse - Class for command-line option analysis
+	devel/rubygem-ostruct           ostruct - Class to build custom data structures, similar to a Hash
+	devel/rubygem-pp                pp - Provide a PrettyPrinter for Ruby objects
+	devel/rubygem-prettyprint       prettyprint - Pretty printing algorithm for readable structure
+	devel/rubygem-pstore            pstore - Transactional File Storage for Ruby Objects
+	devel/rubygem-rdoc              rdoc - RDoc produces HTML and command-line documentation for Ruby projects
+	devel/rubygem-readline          readline - Loader for readline
+	devel/rubygem-reline            reline - Alternative GNU Readline or Editline implementation by pure Ruby
+	devel/rubygem-ruby2_keywords    ruby2_keywords - Shim library for Module\#ruby2_keywords
+	devel/rubygem-set               set - Class to deal with collections of unordered, unique values
+	devel/rubygem-singleton         singleton - Implement the Singleton pattern
+	devel/rubygem-syntax_suggest    syntax_suggest -  Help you find the syntax when you get an "unexpected end"
+	devel/rubygem-tempfile          tempfile - Utility class for managing temporary files
+	devel/rubygem-time              time - Extend the Time class with methods for parsing and conversion
+	devel/rubygem-timeout           timeout - Auto-terminate potentially long-running operations in Ruby
+	devel/rubygem-tmpdir            tmpdir - Extend the Dir class to manage the OS temporary file path
+	devel/rubygem-tsort             tsort - Topological sorting using Tarjan's algorithm
+	devel/rubygem-un                un - Utilities to replace common UNIX commands
+	devel/rubygem-weakref           weakref - Allow a referenced object to be garbage-collected
+	dns/rubygem-resolv              resolv - Thread-aware DNS resolver library in Ruby
+	net/rubygem-ipaddr              ipaddr - Set of methods to manipulate an IP address
+	net/rubygem-net-protocol        net-protocol - Abstruct interface for net-* client
+	net/rubygem-open-uri            open-uri - Easy-to-use wrapper for Net::HTTP, Net::HTTPS and Net::FTP
+	net/rubygem-uri                 uri - Provide classes to handle Uniform Resource Identifiers
+	security/rubygem-securerandom   securerandom - Interface for secure random number generator
+	shells/rubygem-shellwords       shellwords - Manipulate strings with word parsing rules of UNIX Bourne shell
+	textproc/rubygem-prism          prism - Prism Ruby parser
+	www/rubygem-cgi			cgi - Support for the Common Gateway Interface protocol
+	www/rubygem-net-http            net-http - HTTP client api for Ruby
+
+    default gems from ext:
+	devel/rubygem-date              date - Subclass of Object includes Comparable module for handling dates
+	devel/rubygem-etc               etc - Provide access to information typically stored in UNIX /etc directory
+	devel/rubygem-fcntl             fcntl - Load constants defined in the OS fcntl.h C header file
+	devel/rubygem-fiddle            fiddle - libffi wrapper for Ruby
+	devel/rubygem-io-console        io-console - Add console capabilities to IO instances
+	devel/rubygem-io-nonblock       io-nonblock - Enable non-blocking mode with IO class
+	devel/rubygem-io-wait           io-wait - Wait until IO is readable or writable without blocking
+	devel/rubygem-json              json - JSON implementation as a Ruby extension in C
+	devel/rubygem-pathname          pathname - Representation of the name of a file or directory on the filesystem
+	devel/rubygem-stringio          stringio - Pseudo IO class from/to String
+	devel/rubygem-strscan           strscan - Provide lexical scanning operations on a String
+	devel/rubygem-zlib              zlib - Ruby interface for the zlib compression/decompression library
+	security/rubygem-digest         digest - Framework for message digest libraries
+	security/rubygem-openssl        openssl - Wrap the OpenSSL library
+	textproc/rubygem-psych          psych - YAML parser and emitter
+
+    bundled gems:
+	converters/rubygem-base64       base64 - Encode and decode binary data using a Base64 representation
+	devel/rubygem-csv               csv - Interface to CSV files and data
+	devel/rubygem-debug             debug - Debugging functionality for Ruby
+	devel/rubygem-drb               drb - Distributed object system for Ruby
+	devel/rubygem-getoptlong        getoptlong - GetoptLong for Ruby
+	devel/rubygem-minitest          minitest - Minitest provides a complete suite of testing facilities
+	devel/rubygem-mutex_m           mutex_m - Mixin to extend objects to be handled like a Mutex
+	devel/rubygem-observer          observer - Implementation of the Observer object-oriented design pattern
+	devel/rubygem-power_assert      power_assert - Power Assert for Ruby
+	devel/rubygem-racc              racc - LALR(1) parser generator for Ruby
+	devel/rubygem-rake              rake - Ruby Make
+	devel/rubygem-rbs               rbs - Language for type signatures for Ruby and standard library definitions
+	devel/rubygem-rinda             rinda - Linda distributed computing paradigm in Ruby
+	devel/rubygem-syslog            syslog - Ruby interface for the POSIX system logging facility
+	devel/rubygem-test-unit         test-unit - Improved version of Test::Unit bundled in Ruby
+	devel/rubygem-typeprof          typeprof - Type analysis tool for Ruby code
+	dns/rubygem-resolv-replace      resolv-replace - Replace Socket DNS with Resolv
+	ftp/rubygem-net-ftp             net-ftp - Support for the File Transfer Protocol
+	mail/rubygem-net-imap           net-imap - Ruby client api for Internet Message Access Protocol
+	mail/rubygem-net-pop            net-pop - Ruby client library for POP3
+	mail/rubygem-net-smtp           net-smtp - Simple Mail Transfer Protocol client library for Ruby
+	math/rubygem-matrix             matrix - Implementation of Matrix and Vector classes
+	math/rubygem-bigdecimal         bigdecimal - Arbitrary-precision decimal floating-point number class
+	math/rubygem-prime              prime - Prime numbers and factorization library
+	net/rubygem-nkf                 nkf - Ruby extension for Network Kanji Filter
+	textproc/rubygem-abbrev         abbrev - Calculate a set of unique abbreviations for a given set of strings
+	textproc/rubygem-rexml          rexml - XML toolkit for Ruby
+	www/rubygem-rss                 rss - Family of libraries that support various formats of XML feeds
+
+And these two standard gems are not yet provieded as ports, so use ruby-gems to install:
+
+    default gems from lib:
+	yaml - YAML Ain't Markup Language
+
+    bundled gems:
+        repl_type_completor - Type based completion for REPL.
+	
+Install them as occasion demands.
+EOM
+}
+]
