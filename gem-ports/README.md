@@ -13,6 +13,7 @@ Ruby 3.4 のソースコードに含まれているgemでFreeBSDにportsが無�
 2. gem のソースを/usr/ports/distfiles/rubygem にコピーします
    ```
    # mkdir -p /usr/ports/distfiles/rubygem
+   # cd /usr/ports/distfiles/rubygem
    # gem fetch yaml -v '=0.4.0'
    Fetching yaml-0.4.0.gem
    Downloaded yaml-0.4.0
