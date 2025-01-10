@@ -65,3 +65,7 @@ FreeBSD に Ruby 3.4 をインストールするためのportsのテストコー
 * /etc/hosts に IPv6 のlocalhost設定('::1 localhost ...')行がある場合、コメントアウトないし削除する。
 * パスの通った ruby コマンド(/usr/local/bin/ruby)でruby34が実行されるようにする(test/reline/test_reline.rb の 449行目に'ruby'というコマンドを実行するテストがある）
 
+変更履歴
+---------------
+
+* [2025/01/10] yaml, repl_type_completor のportsを作成
