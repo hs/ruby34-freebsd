@@ -41,6 +41,36 @@ FreeBSD に Ruby 3.4 をインストールするためのportsのテストコー
    # make && make install
    ```
 
+make check の確認手順
+----------
+
+使い方の手順にしたがってRuby 3.4を導入済みの環境での、make checkの確認手順は以下のようになります。
+
+1. /etc/hosts を確認してIPv6のlocalhostの設定がある場合はコメントアウトします。
+   ```
+   # ::1			localhost localhost.tsnr.com
+   ```
+
+以下の手順は一般ユーザで実行します。root権限で make checkを実行すると権限関係でいくつかのテストが失敗します。
+
+2. Ruby 3.4 のソースを展開します。
+   ```
+   % tar xf ruby-3.4.1.tar.xz
+   % cd ruby-3.4.1
+   ```
+
+3. Ruby 3.4を非デフォルトでインストールしている(上記手順2.を省略した）場合、patch-ruby34-test を当てます
+   ```
+   % patch < path/to/patch-ruby34-test
+   ```
+
+4. ビルドしてmake checkを実行します
+   ```
+   % ./configure
+   % make
+   % make check
+   ```
+
 説明
 ----------
 
